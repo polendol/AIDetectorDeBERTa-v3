@@ -3,9 +3,9 @@ import os
 
 os.environ["HF_HUB_DISABLE_SYMLINKS_WARNING"] = "1"
 #the model
-pipe = pipeline("text-classification", model="roberta-base-openai-detector")
+pipe = pipeline("text-classification", model="vraj33/ai-text-detector-deberta")
 
-chunk_size = 1000 #100 characters, 150-200 words, safe for 512 tokens limit
+chunk_size = 1000 #100 characters, 150-200 words
 model_name = pipe
 
 def main():
@@ -26,7 +26,7 @@ def main():
     chunks = [content[i:i + chunk_size] for i in range(0, len(content), chunk_size)]
 
     #Visualize that the program is running
-    print(f"Analysing {len(chunks)} chunks using roberta-base-openai-detector...")
+    print(f"Analysing {len(chunks)} chunks using DeBERTa-v3...")
 
     #report creation
     with open(output_file, "w", encoding="utf-8") as out:
@@ -37,7 +37,14 @@ def main():
         for i, chunk in enumerate(chunks):
             print(f"Analyzing chunk {i + 1}/{len(chunks)}...")
             result_coded = model_name(chunk)
-            label = result_coded[0]["label"] #real or AI
+            label_coded = result_coded[0]["label"] #real or AI, O = human, 1 =  AI
+            if label_coded == "LABEL_0":
+                label = "AI"
+            elif label_coded == "LABEL_1":
+                label = "Human"
+            else:
+                label = "Unrecognised"
+
             score = result_coded[0]["score"] #how confident the model is about the label
 
             out.write(f"--- CHUNK {i + 1} ---\n")

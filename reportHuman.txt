@@ -1,0 +1,24 @@
+AI DETECTION REPORT
+Model used: TextClassificationPipeline: {'model': 'DebertaV2ForSequenceClassification', 'dtype': 'float32', 'device': 'cpu', 'input_modalities': 'text'}
+Total Chunks: 2
+
+--- CHUNK 1 ---
+TEXT: You are a police officer called for a crime scene in Montflorit. The crime scene is a big, wealthy h...
+LABEL:
+Human
+
+SCORE:
+0.90920490026474
+
+**************************************************
+
+--- CHUNK 2 ---
+TEXT:  if you feel this is necessary. You can take notes....
+LABEL:
+AI
+
+SCORE:
+0.6019999384880066
+
+**************************************************
+
