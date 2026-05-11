@@ -1,0 +1,5 @@
+This AI detector uses roberta-base-openai-detector freely available on HuggingFace. It analyzes .txt file by chunks of
+150-200 words (1000 characters) and returns a .txt report with label (Real vs not real) and confidence score (0.0 - 1.0)
+for each chunk.
+
+Given that this model was developed for GPT-2, it was not able to successfully detect Gemini (2026) generated paragraphs.
