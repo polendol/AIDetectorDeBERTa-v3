@@ -1,0 +1,204 @@
+AI DETECTION REPORT
+Model used: TextClassificationPipeline: {'model': 'DebertaV2ForSequenceClassification', 'dtype': 'float32', 'device': 'cpu', 'input_modalities': 'text'}
+Total Chunks: 20
+
+--- CHUNK 1 ---
+TEXT: Vocabulary Learning in the Streaming Era: Informal Strategies of Novice Language Learners Abstract  ...
+LABEL:
+AI
+
+SCORE:
+0.999824583530426
+
+**************************************************
+
+--- CHUNK 2 ---
+TEXT: lish series in recent years (Neira et al., 2023).  To date, L2 research involving novice (ab initio)...
+LABEL:
+AI
+
+SCORE:
+0.9998282194137573
+
+**************************************************
+
+--- CHUNK 3 ---
+TEXT: posure (FE) to a novel language. Consequently, this study aims to explore the use of VLS by novice l...
+LABEL:
+AI
+
+SCORE:
+0.9998279809951782
+
+**************************************************
+
+--- CHUNK 4 ---
+TEXT: ungsim & Leavell, 2006; Lawson & Hogben, 1996; Schmitt, 1997; among others). Given the changing land...
+LABEL:
+AI
+
+SCORE:
+0.9998314380645752
+
+**************************************************
+
+--- CHUNK 5 ---
+TEXT: ntify a word's meaning when it is first encountered, and consolidation strategies, which are employe...
+LABEL:
+AI
+
+SCORE:
+0.9998393058776855
+
+**************************************************
+
+--- CHUNK 6 ---
+TEXT: trol learners exert during AV processing. 2.2.2. Comparing Unimodal and Multimodal Strategy Use As t...
+LABEL:
+AI
+
+SCORE:
+0.9998338222503662
+
+**************************************************
+
+--- CHUNK 7 ---
+TEXT: esis (Clahsen & Felser, 2006), which posits that adult learners tend to prioritize top-down framewor...
+LABEL:
+AI
+
+SCORE:
+0.9998321533203125
+
+**************************************************
+
+--- CHUNK 8 ---
+TEXT: ons, nor has the literature sufficiently investigated how the presence or absence of on-screen text ...
+LABEL:
+AI
+
+SCORE:
+0.9998039603233337
+
+**************************************************
+
+--- CHUNK 9 ---
+TEXT: e of additional languages, most notably French (n = 40) and German (n = 22). Participants also repor...
+LABEL:
+AI
+
+SCORE:
+0.9998171925544739
+
+**************************************************
+
+--- CHUNK 10 ---
+TEXT: n the target language (Italian) and the participants’ L1s (Spanish and Catalan). Inter-rater agreeme...
+LABEL:
+AI
+
+SCORE:
+0.9998295307159424
+
+**************************************************
+
+--- CHUNK 11 ---
+TEXT: rms unique to the captioned condition, these were exclusive to the CG. Consequently, the final versi...
+LABEL:
+AI
+
+SCORE:
+0.9997780919075012
+
+**************************************************
+
+--- CHUNK 12 ---
+TEXT: ieved a mean score above 1.0, where 1 corresponds to “never”. Friedman tests indicated significant d...
+LABEL:
+AI
+
+SCORE:
+0.9998084902763367
+
+**************************************************
+
+--- CHUNK 13 ---
+TEXT: tegories (CG), and analysing word parts (NCG). In sum, both groups displayed a remarkably similar pa...
+LABEL:
+AI
+
+SCORE:
+0.9998145699501038
+
+**************************************************
+
+--- CHUNK 14 ---
+TEXT: (M = 3.73 vs. M = 3.65), guessing meanings from words appearing in the same context (M = 3.50 vs. M ...
+LABEL:
+AI
+
+SCORE:
+0.99982750415802
+
+**************************************************
+
+--- CHUNK 15 ---
+TEXT: and morphological forms. These findings identify an “analytical learner profile” in both experimenta...
+LABEL:
+AI
+
+SCORE:
+0.999803364276886
+
+**************************************************
+
+--- CHUNK 16 ---
+TEXT:  upon the theoretical predictions of Nyikos & Fan (2007), Cohen (2005), and Cohen & Aphek (1981), as...
+LABEL:
+AI
+
+SCORE:
+0.9998308420181274
+
+**************************************************
+
+--- CHUNK 17 ---
+TEXT: guessing from context, and comparing words to the L1 or other known languages. While effective for i...
+LABEL:
+AI
+
+SCORE:
+0.9998284578323364
+
+**************************************************
+
+--- CHUNK 18 ---
+TEXT: arners prioritize comprehension through top-down strategies like visual cues and contextual guessing...
+LABEL:
+AI
+
+SCORE:
+0.9998230338096619
+
+**************************************************
+
+--- CHUNK 19 ---
+TEXT: ciation, analysing word parts, and even using physical actions to remember vocabulary. Therefore, em...
+LABEL:
+AI
+
+SCORE:
+0.9998236298561096
+
+**************************************************
+
+--- CHUNK 20 ---
+TEXT: ng learners to satisfy their need for meaning while potentially relying on implicit mechanisms for f...
+LABEL:
+AI
+
+SCORE:
+0.9998250603675842
+
+**************************************************
+

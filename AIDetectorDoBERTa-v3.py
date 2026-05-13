@@ -5,13 +5,13 @@ os.environ["HF_HUB_DISABLE_SYMLINKS_WARNING"] = "1"
 #the model
 pipe = pipeline("text-classification", model="vraj33/ai-text-detector-deberta")
 
-chunk_size = 1000 #100 characters, 150-200 words
+chunk_size = 2000 #2000 characters, 300-400 words
 model_name = pipe
 
 def main():
     #the user personalizes the input file and the report name file
-    file_in = input(str("Introduce the name of your file: "))
-    file_out = input(str("Introduce the name of your report file: "))
+    file_in = input("Introduce the name of your file: ")
+    file_out = input("Introduce the name of your report file: ")
     input_file = str(file_in + ".txt")
     output_file = str(file_out + ".txt")
 
