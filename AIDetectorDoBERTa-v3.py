@@ -2,6 +2,11 @@ from transformers import pipeline
 import os
 
 os.environ["HF_HUB_DISABLE_SYMLINKS_WARNING"] = "1"
+
+# Folder where the user's .txt files are read from and reports are saved to.
+# In Docker it is /app/data (set in the Dockerfile); locally it is the current folder.
+DATA_DIR = os.getenv("DATA_DIR", ".")
+
 #the model
 pipe = pipeline("text-classification", model="vraj33/ai-text-detector-deberta")
 
@@ -12,8 +17,8 @@ def main():
     #the user personalizes the input file and the report name file
     file_in = input("Introduce the name of your file: ")
     file_out = input("Introduce the name of your report file: ")
-    input_file = str(file_in + ".txt")
-    output_file = str(file_out + ".txt")
+    input_file = os.path.join(DATA_DIR, file_in + ".txt")
+    output_file = os.path.join(DATA_DIR, file_out + ".txt")
 
     try:
         with open(input_file, "r", encoding="utf-8") as f:
@@ -37,7 +42,7 @@ def main():
         for i, chunk in enumerate(chunks):
             print(f"Analyzing chunk {i + 1}/{len(chunks)}...")
             result_coded = model_name(chunk)
-            label_coded = result_coded[0]["label"] #real or AI, O = human, 1 =  AI
+            label_coded = result_coded[0]["label"] #real or AI, 1 = human, 0 =  AI
             if label_coded == "LABEL_0":
                 label = "AI"
             elif label_coded == "LABEL_1":

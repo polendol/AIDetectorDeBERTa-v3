@@ -13,7 +13,25 @@ However, a great difficulty of AI-generated text detection in the context of aca
 Therefore, while this detector works for simple human text, it confuses academic writing with human text in the context
 of academic language.
 
+## Docker
 
+## Requirements
+1. Docker: Installed and running (Docker Desktop on Windows/macOS or Docker Engine on Linux).
+2. Docker Compose: Included by default with Docker Desktop or available via docker-compose-plugin.
+3. Hardware: Minimum 8 GB RAM recommended. At least 5 GB free disk space for downloading the DeBERTa-v3 model weights and base image layers.
+4. Storage / Permissions: Permission to create folders and write files in the project directory.
+The container uses a Docker Bind Mount (./data:/app/data) to interact with your host computer's filesystem.
+
+
+
+## How it works
+1. Automatic Folder Creation:You do not need to create a data/ folder manually. When you start the container for the first time via docker compose, Docker will automatically create the data/ folder on your PC next to docker-compose.yml.
+2. Input File Placement: Add or copy any .txt file you want to analyze into the local data/ folder (e.g., data/my_essay.txt).
+3. Output Reports: The analysis reports are saved directly into the local data/ folder, allowing you to access them immediately on your PC.
+4. Hugging Face Model Cache:Model weights are cached in a named Docker volume (hf_cache). The ~1.7 GB model is downloaded only once during the initial run and reused on subsequent executions.
+5. Step-by-step: build the docker image (`docker compose build`), add the input `.txt` file to `./data` folder, run the application (`docker compose run --rm ai-detector`), interact with the prompt and view the report in the `./data` folder. 
+
+## Local
 ## Requirements
 - Python 3.8+
 - Internet connection to download the model
@@ -49,6 +67,9 @@ Generates a `.txt` report with per-chunk analysis:
 - `reportXX.txt` - detection reports generated for each XX file
 - `requirements.txt` — Python dependencies
 - `README.md` — this file
+- `Dockerfile` - container build definition
+- `docker-compose.yml` 
+- `/data` - auto-created folder for input text and generated reports
 
 ## Notes
 - Chunk size is set to **2000 characters** for optimal model performance

@@ -1,0 +1,13 @@
+name: ai-detector-DoBERTa-v3
+
+services:
+  ai-detector:
+    build: .
+    stdin_open: true
+    tty: true
+    volumes:
+      - ./data:/app/data
+      - hf_cache:/home/appuser/.cache/huggingface
+
+volumes:
+  hf_cache:
