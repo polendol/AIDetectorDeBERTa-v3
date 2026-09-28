@@ -30,6 +30,7 @@ The container uses a Docker Bind Mount (./data:/app/data) to interact with your 
 3. Output Reports: The analysis reports are saved directly into the local data/ folder, allowing you to access them immediately on your PC.
 4. Hugging Face Model Cache:Model weights are cached in a named Docker volume (hf_cache). The ~1.7 GB model is downloaded only once during the initial run and reused on subsequent executions.
 5. Step-by-step: build the docker image (`docker compose build`), add the input `.txt` file to `./data` folder, run the application (`docker compose run --rm ai-detector`), interact with the prompt and view the report in the `./data` folder. 
+6. ee How it works section in Local section below for specifics on how the program and output details
 
 ## Local
 ## Requirements
