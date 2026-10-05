@@ -15,22 +15,23 @@ of academic language.
 
 ## Docker
 
-## Requirements
-1. Docker: Installed and running (Docker Desktop on Windows/macOS or Docker Engine on Linux).
-2. Docker Compose: Included by default with Docker Desktop or available via docker-compose-plugin.
-3. Hardware: Minimum 8 GB RAM recommended. At least 5 GB free disk space for downloading the DeBERTa-v3 model weights and base image layers.
-4. Storage / Permissions: Permission to create folders and write files in the project directory.
-The container uses a Docker Bind Mount (./data:/app/data) to interact with your host computer's filesystem.
+### Requirements
+1. **Docker:** Installed and running (Docker Desktop on Windows/macOS or Docker Engine on Linux).
+2. **Docker Compose:** Included by default with Docker Desktop, or available via `docker-compose-plugin`.
+3. **Hardware:** Minimum 8 GB RAM recommended. At least 5 GB of free disk space for the DeBERTa-v3 model weights and base image layers.
+4. **Network:** Internet access on the first run, to download the model from Hugging Face.
 
+### How it works
+1. **Web interface:** The container runs a Gradio web app on port 7860. You upload a `.txt` file in your browser and download the report from the same page. No folders need to be created or mounted.
+2. **Hugging Face model cache:** Model weights are cached in a named Docker volume (`hf_cache`). The ~1.7 GB model is downloaded only once, on the first run, and reused afterwards.
+3. **Reports:** Each report is shown on the page and offered as a `.txt` download named after your file (e.g. `my_essay.txt` becomes `my_essay_report.txt`). Reports are not stored on your computer unless you download them.
 
+### Step by step
+1. Build and start the application:`docker compose up --build` 
+2. Wait until the logs show that Gradio is running. The first start is slow because the model is downloading.
+3. Open http://localhost:7860 in your browser.
+4. Upload a `.txt` file, wait for the analysis to finish, and click the download link to save the report.
 
-## How it works
-1. Automatic Folder Creation:You do not need to create a data/ folder manually. When you start the container for the first time via docker compose, Docker will automatically create the data/ folder on your PC next to docker-compose.yml.
-2. Input File Placement: Add or copy any .txt file you want to analyze into the local data/ folder (e.g., data/my_essay.txt).
-3. Output Reports: The analysis reports are saved directly into the local data/ folder, allowing you to access them immediately on your PC.
-4. Hugging Face Model Cache:Model weights are cached in a named Docker volume (hf_cache). The ~1.7 GB model is downloaded only once during the initial run and reused on subsequent executions.
-5. Step-by-step: build the docker image (`docker compose build`), add the input `.txt` file to `./data` folder, run the application (`docker compose run --rm ai-detector`), interact with the prompt and view the report in the `./data` folder. 
-6. See How it works section in Local section below for specifics on how the program and output details
 
 ## Local
 ## Requirements
@@ -42,7 +43,7 @@ pip install -r requirements.txt
 
 
 ## Usage
-AI_detector_DoBERTa-v3
+AI_detector_DeBERTa-v3
 
 
 Enter the input file name 
@@ -61,7 +62,7 @@ Generates a `.txt` report with per-chunk analysis:
 4. Writes a full report to the output `.txt` file
 
 ## Files Structure
-- `AI_detector_DoBERTa-v3.py` - main program, run this to launch the app (Gemma3:4b)
+- `AI_detector_DeBERTa-v3.py` - main program, run this to launch the app (Gemma3:4b)
 - `AI.txt` - file with an example short AI-generated text (for testing)
 - `Human.txt` - file with an example of a text written by human (for testing)
 - `CJAL.txt` - authentic paper where human and AI generated text is mixed (for testing)
@@ -71,6 +72,7 @@ Generates a `.txt` report with per-chunk analysis:
 - `Dockerfile` - container build definition
 - `docker-compose.yml` 
 - `/data` - auto-created folder for input text and generated reports
+- `app.py` - gradio interface
 
 ## Notes
 - Chunk size is set to **2000 characters** for optimal model performance

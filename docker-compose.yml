@@ -1,12 +1,11 @@
-name: ai-detector-DoBERTa-v3
+name: ai-detector-deberta-v3
 
 services:
   ai-detector:
     build: .
-    stdin_open: true
-    tty: true
+    ports:
+      - "7860:7860"
     volumes:
-      - ./data:/app/data
       - hf_cache:/home/appuser/.cache/huggingface
 
 volumes:
