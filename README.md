@@ -63,9 +63,7 @@ Generates a `.txt` report with per-chunk analysis:
 
 ## Files Structure
 - `AI_detector_DeBERTa-v3.py` - main program, run this to launch the app (Gemma3:4b)
-- `AI.txt` - file with an example short AI-generated text (for testing)
 - `Human.txt` - file with an example of a text written by human (for testing)
-- `CJAL.txt` - authentic paper where human and AI generated text is mixed (for testing)
 - `reportXX.txt` - detection reports generated for each XX file
 - `requirements.txt` — Python dependencies
 - `README.md` — this file
@@ -73,6 +71,15 @@ Generates a `.txt` report with per-chunk analysis:
 - `docker-compose.yml` 
 - `/data` - auto-created folder for input text and generated reports
 - `app.py` - gradio interface
+
+
+
+ ## License & Attributions
+
+### Model & Third-Party Attributions
+* **Model Weights:** Uses [`vraj33/ai-text-detector-deberta`](https://huggingface.co/vraj33/ai-text-detector-deberta) hosted on Hugging Face. The underlying architecture is based on [Microsoft DeBERTa-v3](https://huggingface.co/microsoft/deberta-v3-base) (licensed under MIT).
+* **Interface & Frameworks:** Built using [Gradio](https://github.com/gradio-app/gradio) (Apache 2.0 License).
+
 
 ## Notes
 - Chunk size is set to **2000 characters** for optimal model performance
