@@ -80,6 +80,8 @@ Generates a `.txt` report with per-chunk analysis:
 * **Model Weights:** Uses [`vraj33/ai-text-detector-deberta`](https://huggingface.co/vraj33/ai-text-detector-deberta) hosted on Hugging Face. The underlying architecture is based on [Microsoft DeBERTa-v3](https://huggingface.co/microsoft/deberta-v3-base) (licensed under MIT).
 * **Interface & Frameworks:** Built using [Gradio](https://github.com/gradio-app/gradio) (Apache 2.0 License).
 
+### Repository License
+This project is licensed under the [MIT License](LICENSE) — see the LICENSE file for details.
 
 ## Notes
 - Chunk size is set to **2000 characters** for optimal model performance
