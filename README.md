@@ -106,8 +106,8 @@ Run `pip install torch --index-url https://download.pytorch.org/whl/cpu` before 
 ### 🐳 Run with Docker
 
 ```bash
-git clone https://github.com/<your-username>/<repository-name>.git
-cd <repository-name>
+git clone https://github.com/polendol/AIDetectorDoBERTa-v3.git
+cd AIDetectorDoBERTa-v3
 
 docker compose up --build
 ```
