@@ -74,8 +74,8 @@ Python packages are listed in `requirements.txt`.
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/polendol/AIDetectorDoBERTa-v3.git
-cd AIDetectorDoBERTa-v3
+git clone https://github.com/polendol/AIDetectorDeBERTa-v3.git
+cd AIDetectorDeBERTa-v3
 
 # 2. Create and activate a virtual environment
 python -m venv .venv
@@ -103,8 +103,8 @@ Run `pip install torch --index-url https://download.pytorch.org/whl/cpu` before 
 ### 🐳 Run with Docker
 
 ```bash
-git clone https://github.com/polendol/AIDetectorDoBERTa-v3.git
-cd AIDetectorDoBERTa-v3
+git clone https://github.com/polendol/AIDetectorDeBERTa-v3.git
+cd AIDetectorDeBERTa-v3
 
 docker compose up --build
 ```
