@@ -16,14 +16,16 @@
 |:---:|:---:|:---:|:---:|
 | Runs on your machine | Label + score for every ~2,000 characters | Web app and terminal script | Slim, CPU-only Docker image |
 
-</div>
+   <div align="center">
+     <img src="demo.png" alt="AI Text Detector web interface" width="800">
+   </div>
 
 
 ---
 
 ## 💡 Overview
 
-A side project built in my spare time to answer a **real user need**: checking academic drafts for AI-generated text *without* uploading confidential, unpublished work to an online detector.
+A side project built in my spare time to answer my **personal user need**: checking academic drafts for AI-generated text *without* uploading confidential, unpublished work to an online detector.
 
 The document is split into chunks, each chunk is classified by a fine-tuned DeBERTa-v3 model, and a `.txt` report is produced. Everything runs locally; the only network access is a one-time download of the model weights from the Hugging Face Hub.
 
@@ -75,8 +77,8 @@ Python packages are listed in `requirements.txt`.
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/<your-username>/<repository-name>.git
-cd <repository-name>
+git clone https://github.com/polendol/AIDetectorDoBERTa-v3.git
+cd AIDetectorDoBERTa-v3
 
 # 2. Create and activate a virtual environment
 python -m venv .venv
@@ -252,7 +254,7 @@ Best understood as a **local, privacy-preserving screening pipeline** and baseli
 
 ## ⚖️ License
 
-Released under the **[MIT License](LICENSE)**. Copyright (c) 2026 `<Your Name>`.
+Released under the **[MIT License](LICENSE)**. Copyright (c) 2026 polendol.
 
 The MIT License covers **only this project's own code and documentation**. Third-party models and libraries are not redistributed here and keep their own terms.
 
@@ -285,10 +287,6 @@ If you build on the underlying architecture, please cite:
 
 ## 👤 Author
 
-**`<Your Name>`** — NLP / Machine Learning
-
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](<your-linkedin-url>)
-[![GitHub](https://img.shields.io/badge/GitHub-Follow-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/<your-username>)
-[![Email](https://img.shields.io/badge/Email-Contact-EA4335?style=flat-square&logo=gmail&logoColor=white)](mailto:<your-public-contact-email>)
+**`Paulina Olender`** — NLP / Machine Learning
 
 Feedback, issues and suggestions are welcome. If this tool is useful to you, a ⭐ is appreciated.
