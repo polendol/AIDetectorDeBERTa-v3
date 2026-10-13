@@ -1,5 +1,3 @@
-<div align="center">
-
 # 🔍 AI Text Detector
 
 ### Check documents for AI-generated text — 100% locally, nothing leaves your machine
@@ -13,19 +11,18 @@
 ![Local-first](https://img.shields.io/badge/Privacy-local--first-success?style=flat-square)
 
 | 🔒 Private | 🧩 Granular | 🌐 Two interfaces | 🐳 Portable |
-|:---:|:---:|:---:|:---:|
+|---|---|---|---|
 | Runs on your machine | Label + score for every ~2,000 characters | Web app and terminal script | Slim, CPU-only Docker image |
 
-   <div align="center">
+ <div align="center">
      <img src="demo.png" alt="AI Text Detector web interface" width="800">
    </div>
-
-
+   
 ---
 
 ## 💡 Overview
 
-A side project built in my spare time to answer my **personal user need**: checking academic drafts for AI-generated text *without* uploading confidential, unpublished work to an online detector.
+A side project built in my spare time to answer a **real user need**: checking academic drafts for AI-generated text *without* uploading confidential, unpublished work to an online detector.
 
 The document is split into chunks, each chunk is classified by a fine-tuned DeBERTa-v3 model, and a `.txt` report is produced. Everything runs locally; the only network access is a one-time download of the model weights from the Hugging Face Hub.
 
@@ -44,7 +41,7 @@ The document is split into chunks, each chunk is classified by a fine-tuned DeBE
 ## 🛠️ Technical Highlights
 
 | | Area | What this project shows |
-|:---:|---|---|
+|---|---|---|
 | 🧠 | **NLP / Transformers** | Fine-tuned DeBERTa-v3 sequence classifier via 🤗 Transformers; long documents handled through chunking |
 | 🔬 | **Critical evaluation** | Documents the generalization gap between the model's training data and academic prose |
 | 🔒 | **Privacy by design** | Local, offline-capable pipeline with no external uploads |
@@ -195,7 +192,7 @@ The model is loaded once at startup. Each chunk is classified separately, `LABEL
 **Model:** [`vraj33/ai-text-detector-deberta`](https://huggingface.co/vraj33/ai-text-detector-deberta), fine-tuned from [`microsoft/deberta-v3-base`](https://huggingface.co/microsoft/deberta-v3-base) (about 0.2 B parameters). It is downloaded at runtime; **no weights are stored in this repository or in the Docker image**.
 
 | | According to the model card |
-|:---:|---|
+|---|---|
 | 📚 | **Training data:** human-written Wikipedia articles vs. Wikipedia-style articles generated with GPT-Neo (1.3B) |
 | 🎯 | **Reported accuracy:** 99.4 % on in-distribution test data (from the model's author; **not** reproduced here) |
 | ⚠️ | **Stated limitation:** a *generalization gap*: detectors trained on older generators cannot reliably detect modern models |
@@ -254,7 +251,7 @@ Best understood as a **local, privacy-preserving screening pipeline** and baseli
 
 ## ⚖️ License
 
-Released under the **[MIT License](LICENSE)**. Copyright (c) 2026 polendol.
+Released under the **[MIT License](LICENSE)**. Copyright (c) 2026 polendol`.
 
 The MIT License covers **only this project's own code and documentation**. Third-party models and libraries are not redistributed here and keep their own terms.
 
@@ -290,3 +287,4 @@ If you build on the underlying architecture, please cite:
 **`Paulina Olender`** — NLP / Machine Learning
 
 Feedback, issues and suggestions are welcome. If this tool is useful to you, a ⭐ is appreciated.
+
